@@ -82,7 +82,7 @@ function App() {
             <div className="flex w-full gap-4">
               
               {/* Textbox with ref */}
-              <input ref={todoNameRef} type="text" className="block w-full px-4 py-2 transition border rounded-md bg-neutral-100 body-sm text-neutral-500 dark:text-neutral-300 border-neutral-200 focus:ring-2 focus:ring-secondary-400/25 hover:border-primary-400 focus-visible:outline-none" />
+              <input ref={todoNameRef} type="text" className="input-text" />
 
               {/* Add todo item button */}
               <div class="flex-shrink-0">
