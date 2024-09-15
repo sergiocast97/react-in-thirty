@@ -1,0 +1,24 @@
+/*
+ * Inputs and UI Components
+ */
+ @layer utilities {
+
+    // Textbox Label
+    .input-label { @apply block font-bold body-lg text-theme-dark dark:text-theme-light; }
+
+    // Textbox and Textarea
+    .input-text { @apply block w-full px-4 py-2 transition border rounded-md bg-neutral-100 body-sm text-neutral-500 dark:text-neutral-300 border-neutral-200 focus:ring-2 focus:ring-secondary-400/25 hover:border-primary-400; }
+
+    // Dropdown
+    .input-dropdown { @apply block w-full px-4 py-2 transition border rounded-md bg-neutral-100 focus:outline-none body-sm text-neutral-500 dark:text-neutral-300 border-neutral-200 focus:ring-2 focus:ring-secondary-400/25 hover:border-primary-400; }
+
+    // Checkbox
+    .input-checkbox { @apply w-6 h-6 transition border rounded-md bg-theme-light hover:checked:bg-theme-dark checked:bg-theme-medium border-theme-darkest focus:ring-theme-dark/25 focus:ring-2 hover:border-theme-medium; }
+
+    // Radio Button
+    .input-radio { @apply w-6 h-6 transition border rounded-full bg-neutral-100 hover:checked:bg-secondary-500 checked:bg-secondary-400 border-secondary-100 focus:ring-primary-400/25 focus:ring-2 hover:border-primary-400; }
+    
+    // Selector Label
+    .input-selector-label { @apply body-md text-neutral-600 dark:text-neutral-200; }
+
+}

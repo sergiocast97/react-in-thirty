@@ -1,0 +1,42 @@
+/*
+ * Typography and Text
+ */
+@layer base {
+
+    /* Headings */
+    .head-h1 { @apply font-heading font-bold leading-none text-[2.75rem] lg:text-[3.25rem] xl:text-[3.75rem] }  // Head 1 - 128px 
+    .head-h2 { @apply font-heading font-bold leading-tight text-[2.25rem] md:text-[3rem] }      // Head 2 - 48px 
+    .head-h3 { @apply font-heading font-bold leading-tight text-[1.875rem] md:text-[2.25rem] }  // Head 3 - 36px
+    .head-h4 { @apply font-heading font-bold leading-tight text-[1.5rem] md:text-[1.875rem] }   // Head 4 - 30px
+    .head-h5 { @apply font-heading font-bold leading-tight text-[1.25rem] md:text-[1.5rem] }    // Head 5 - 24px
+
+    /* Body */
+    .body-2xl { @apply font-body font-normal leading-loose text-[1.5rem] }    // Body 2xl - 24px
+    .body-xl { @apply font-body font-normal leading-loose text-[1.25rem] }    // Body xl - 20px
+    .body-lg { @apply font-body font-normal leading-loose text-[1.125rem] }   // Body lg - 18px
+    .body-md { @apply font-body font-normal leading-loose text-[1rem] }       // Body md - 16px
+    .body-sm { @apply font-body font-normal leading-loose text-[0.875rem] }   // Body sm - 14px
+    .body-xs { @apply font-body font-normal leading-loose text-[0.75rem] }    // Body xs - 12px
+
+}
+
+@layer utilities {
+
+    .copy {
+
+        @apply space-y-2;
+
+        italic { @apply italic; }
+
+        bold { @apply font-bold; }
+
+        a { @apply font-bold text-primary-400 transition hover:text-primary-500 active:text-primary-300; }
+
+        &> ul {
+
+            @apply list-disc list-outside ml-[1.2em];
+
+            li::marker { @apply text-primary-400; }
+        }
+    }
+}

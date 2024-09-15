@@ -1,0 +1,48 @@
+/*
+ * Buttons
+ */
+@layer utilities {
+    
+	// Button
+	.btn {
+
+		// Basic Classes
+		@apply block w-auto text-center transition rounded-md sm:inline-block focus:outline-0;
+
+		// Sizing
+		&.btn-sm { @apply px-3.5 py-2.5 body-sm }
+		&.btn-md { @apply px-3.5 py-3 body-md }
+		&.btn-lg { @apply px-4 py-3.5 body-lg }
+
+		// Filled Buttons
+		&.btn-filled {
+
+			@apply focus:ring-2 border-none focus:border-none font-semibold;
+			
+			// Colour
+            &.btn-neutral { @apply text-theme-white bg-theme-darkest focus:ring-theme-medium/25 }
+			&.btn-light { @apply text-theme-darkest bg-theme-lightest focus:ring-theme-medium/25 }
+
+		}
+
+		// Line Buttons
+		&.btn-line {
+
+			@apply focus:ring-2 border-solid border-2 bg-none font-semibold;
+			
+			// Colour
+            &.btn-neutral { @apply text-theme-darkest bg-transparent border-theme-darkest focus:ring-theme-medium/25 }
+			&.btn-light { @apply text-theme-lightest bg-transparent border-theme-lightest focus:ring-theme-medium/25 }
+		}
+
+		// Link Buttons
+		&.btn-link {
+
+			@apply p-0 border-none focus:border-none font-semibold;
+	
+			// Colour
+            &.btn-neutral { @apply text-theme-darkest hover:text-theme-dark active:text-theme-medium }
+			&.btn-light { @apply text-theme-lightest hover:text-theme-light active:text-theme-medium }
+		}
+	}
+}
