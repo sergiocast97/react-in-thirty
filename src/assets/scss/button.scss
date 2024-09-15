@@ -21,7 +21,7 @@
 			
 			// Colour
             &.btn-neutral { @apply text-theme-white bg-theme-darkest focus:ring-theme-medium/25 }
-			&.btn-light { @apply text-theme-darkest bg-theme-lightest focus:ring-theme-medium/25 }
+			&.btn-light { @apply text-theme-darkest bg-theme-white focus:ring-theme-medium/25 }
 
 		}
 
@@ -32,7 +32,7 @@
 			
 			// Colour
             &.btn-neutral { @apply text-theme-darkest bg-transparent border-theme-darkest focus:ring-theme-medium/25 }
-			&.btn-light { @apply text-theme-lightest bg-transparent border-theme-lightest focus:ring-theme-medium/25 }
+			&.btn-light { @apply text-theme-white bg-transparent border-theme-lightest focus:ring-theme-medium/25 }
 		}
 
 		// Link Buttons

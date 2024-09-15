@@ -68,36 +68,38 @@ function App() {
   return (
     // Fragment, i.e no div
     <>
-      <div className="min-h-screen container-block">
-        <div className="mx-auto gap-8 flex flex-col items-start justify-center max-w-screen-sm">
+      <div className="bg-theme-darkest text-theme-white dark">
+        <div className="min-h-screen container-block ">
+          <div className="mx-auto gap-8 flex flex-col items-start justify-center max-w-screen-sm">
 
-          <h1 className="head-h1">ToDo List</h1>
+            <h1 className="head-h1">ToDo List</h1>
 
-          {/* Display how many todos items there is */}
-          <p className="body-2xl">
-            <span className="font-bold">{todos.filter(todo=> !todo.complete ).length }</span> tasks left
-          </p>
+            {/* Display how many todos items there is */}
+            <p className="body-2xl text-theme-lightest">
+              <span className="font-bold text-theme-white">{todos.filter(todo=> !todo.complete ).length }</span> tasks left
+            </p>
 
-          <div className="flex w-full gap-4">
-            
-            {/* Textbox with ref */}
-            <input ref={todoNameRef} type="text" className="block w-full px-4 py-2 transition border rounded-md bg-neutral-100 body-sm text-neutral-500 dark:text-neutral-300 border-neutral-200 focus:ring-2 focus:ring-secondary-400/25 hover:border-primary-400 focus-visible:outline-none" />
+            <div className="flex w-full gap-4">
+              
+              {/* Textbox with ref */}
+              <input ref={todoNameRef} type="text" className="block w-full px-4 py-2 transition border rounded-md bg-neutral-100 body-sm text-neutral-500 dark:text-neutral-300 border-neutral-200 focus:ring-2 focus:ring-secondary-400/25 hover:border-primary-400 focus-visible:outline-none" />
 
-            {/* Add todo item button */}
-            <div class="flex-shrink-0">
-              <button onClick={handleAddTodo} class="btn btn-md btn-filled btn-neutral">Add item</button>
+              {/* Add todo item button */}
+              <div class="flex-shrink-0">
+                <button onClick={handleAddTodo} class="btn btn-md btn-filled btn-light">Add item</button>
+              </div>
+              
             </div>
-            
-          </div>
 
-          <div className="flex flex-col items-start gap-2">
-            {/* Todo List with todos array and toggle function as props */}
-            <TodoList todos={ todos } toggleTodo={toggleTodo} />
-          </div>
+            <div className="flex flex-col items-start gap-2">
+              {/* Todo List with todos array and toggle function as props */}
+              <TodoList todos={ todos } toggleTodo={toggleTodo} />
+            </div>
 
-          {/* Clear completed todos button */}
-          <button onClick={handleClearTodos} class="btn btn-sm btn-line btn-neutral">Clear completed</button>
-      
+            {/* Clear completed todos button */}
+            <button onClick={handleClearTodos} class="btn btn-sm btn-line btn-light">Clear completed</button>
+        
+          </div>
         </div>
       </div>
     </>

@@ -5,54 +5,57 @@ module.exports = {
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
 
+    darkMode: 'class',
+
     theme: {
         
-    // Fonts
-    fontFamily: {
+        // Fonts
+        fontFamily: {
 
-        // Headings
-        'heading': [ 'Noto Sans Display' ],
+            // Headings
+            'heading': [ 'Noto Sans Display' ],
 
-        // Display
-        'display': [ 'Noto Sans Display' ],
+            // Display
+            'display': [ 'Noto Sans Display' ],
 
-        // Body
-        'body': [ 'Noto Sans' ],
+            // Body
+            'body': [ 'Noto Sans' ],
 
-    },
+        },
 
-    extend: {
+        extend: {
 
-        // Palette
-        colors: {
-            theme: {
-                'darkest':  '#18181B',  // Background
-                'dark':     '#27272A',  // Foregorund
-                'medium':   '#52525B',  // Border Weak
-                'light':    '#A1A1AA',  // Border Strong
-                'lightest': '#D4D4D8',  // Text Copy
-                'white':    '#FFFFFF',  // Text Heading
+            // Palette
+            colors: {
+                theme: {
+                    'darkest':  '#18181B',  // Background
+                    'dark':     '#27272A',  // Foregorund
+                    'medium':   '#52525B',  // Border Weak
+                    'light':    '#A1A1AA',  // Border Strong
+                    'lightest': '#D4D4D8',  // Text Copy
+                    'white':    '#FFFFFF',  // Text Heading
+                },
             },
-        },
 
-        backgroundImage: {
-            
-            // Noise Background
-            'noise': 'url("/assets/patterns/noise.png")',
-        },
+            backgroundImage: {
+                
+                // Noise Background
+                'noise': 'url("/assets/patterns/noise.png")',
+            },
 
-        dropShadow: {
+            dropShadow: {
 
-            // Glow Effect
-            glow: [
-                "0 0px 16px rgba(255,255, 255, 0.1)",
-                "0 0px 64px rgba(255, 255,255, 0.2)"
-            ]
+                // Glow Effect
+                glow: [
+                    "0 0px 16px rgba(255,255, 255, 0.1)",
+                    "0 0px 64px rgba(255, 255,255, 0.2)"
+                ]
+            },
+        
         },
-    
+        
     },
-},
 
-plugins: [],
+    plugins: [],
 
 }
