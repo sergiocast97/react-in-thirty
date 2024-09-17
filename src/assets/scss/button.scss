@@ -38,7 +38,7 @@
 		// Link Buttons
 		&.btn-link {
 
-			@apply p-0 border-none focus:border-none font-semibold;
+			@apply p-0 underline underline-offset-4 border-none focus:border-none font-semibold;
 	
 			// Colour
             &.btn-neutral { @apply text-theme-darkest hover:text-theme-dark active:text-theme-medium }
