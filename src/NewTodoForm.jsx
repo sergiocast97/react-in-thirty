@@ -24,8 +24,8 @@ export function NewTodoForm({ onSubmit }){
       />
 
       {/* Add todo item button */}
-      <div class="flex-shrink-0">
-        <button class="btn btn-md btn-filled btn-light">Add item</button>
+      <div className="flex-shrink-0">
+        <button className="btn btn-md btn-filled btn-light">Add item</button>
       </div>
     </form>
   )

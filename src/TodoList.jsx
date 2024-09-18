@@ -3,7 +3,7 @@ import {TodoItem} from "./TodoItem";
 // Props are the todo list and the toggleTodo function for todo items
 export function TodoList({ todos, toggleTodo, deleteTodo }){
   return(
-    <ul className="flex flex-col items-start gap-2 w-full">
+    <ul className="flex flex-col items-start w-full gap-2">
 
       {/* If no todos, return no todos */}
       {todos.length === 0 && "No Todos"}

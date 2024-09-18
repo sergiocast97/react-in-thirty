@@ -21,8 +21,15 @@ export default function App(){
 
   })
 
-  // Effect runs on every update to todos array, sets current content to local storage 
+  // Effect runs on every update to todos array 
   useEffect(() => {
+    // Sets current content to local storage
+    localStorage.setItem("ITEMS", JSON.stringify(todos))
+  }, [todos])
+
+  // Effect runs on every update to todos array 
+  useEffect(() => {
+    // Returns the number of uncompleted tasks left
     localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos])
 
@@ -68,18 +75,20 @@ export default function App(){
     })
   }
 
+  // TODO add drag and drop to reorder
+
   return (
     // Fragment, i.e no div
     <>
       <div className="bg-theme-darkest text-theme-white dark">
         <div className="min-h-screen container-block ">
-          <div className="mx-auto gap-8 flex flex-col items-start justify-center max-w-screen-sm">
+          <div className="flex flex-col items-start justify-center max-w-screen-sm gap-8 mx-auto">
 
             <h1 className="head-h1">ToDo List</h1>
 
             {/* Display how many todos items there is */}
             <p className="body-2xl text-theme-lightest">
-              <span className="font-bold text-theme-white">{todos.filter(todo=> !todo.complete ).length }</span> tasks left
+              <span className="font-bold text-theme-white">{todos.filter(todo=>!todo.completed).length}</span> tasks left
             </p>
 
             {/* New Item Form */}
@@ -89,7 +98,7 @@ export default function App(){
             <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
 
             {/* Clear completed todos button */}
-            <button onClick={deleteCompletedTodos} class="btn btn-sm btn-line btn-light">Clear completed</button>
+            <button onClick={deleteCompletedTodos} className="btn btn-sm btn-line btn-light">Clear completed</button>
 
           </div>
         </div>
